@@ -1,0 +1,238 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* logo */
+.logo {
+    position: relative;
+}
+
+.bx_right {
+    position: absolute;
+    right: 0px;
+    top: 0px;
+}
+
+.menu-right {
+    list-style-type: none;
+    display: flex;
+    transform: scale(1.5s);
+}
+
+.menu-right>li,
+.bxs-phone {
+    padding-left: 20px;
+    line-height: 35px;
+    color: #d8d7d5;
+
+}
+
+.menu-right>li:hover {
+    color: firebrick;
+}
+
+/* logo */
+/* menu */
+.menu_sticky {
+    height: 60px;
+    border-bottom: 1px solid gray;
+    position: sticky;
+    top: 0;
+    z-index: 5;
+    background-color: #d8d7d5;
+}
+
+.menu {
+    display: flex;
+    list-style-type: none;
+    position: relative;
+
+}
+
+.menu>li {
+    padding-right: 30px;
+}
+
+.menu>li>a {
+    text-decoration: none;
+    line-height: 60px;
+    font-size: 20px;
+    color: #473f4e;
+    padding:0px 8px;
+    display: block;
+}
+
+.menu>li>a:hover {
+    background-color: antiquewhite;
+    border-bottom:2px solid #473f4e;
+    color:firebrick
+}
+
+.menu>li>.giohang {
+    position: absolute;
+    right: 0px;
+    line-height: 60px;
+}
+
+.menu>li>.giohang {
+    padding: 0 20px;
+}
+
+.menu>li>.giohang:hover {
+    background-color: #999;
+}
+
+.giohang>a>span {
+    padding-left: 5px;
+    font-weight: bold;
+}
+
+/* menu */
+/* slides_show*/
+#slide {
+    width: 1150px;
+    height: 600px;
+    position: relative;
+    margin-top: 20px;
+}
+
+#slide>img {
+    width: 100%;
+    height: 100%;
+    border-radius: 14px;
+}
+
+#slide>.left,
+#slide>.right {
+    position: absolute;
+    top: 50%;
+    left: 50px;
+    color: bisque;
+    font-size: 40px;
+}
+
+#slide>.right {
+    left: unset;
+    top: 50%;
+    right: 50px;
+}
+
+/* slide_show*/
+/* sản phẩm */
+.boxsp {
+    height: 530px;
+}
+
+.img>img {
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.img:hover img {
+    transform: scale(1.09);
+}
+
+.boxsp>a {
+    text-decoration: none;
+    display: block;
+    font-size: 13px;
+    text-align: center;
+    color: #473f4e;
+}
+
+.boxsp>div {
+    text-align: center;
+    font-weight: 600;
+    color: red;
+    padding-top: 10px;
+}
+
+.boxsp>input {
+    /* margin-left:220px; */
+    margin: 10px 0px 10px 220px;
+    text-align: center;
+    padding: 3px;
+    border: none;
+    border-radius: 5px;
+    border: 1px solid red;
+}
+
+.boxsp>button {
+    width: 100%;
+    /* background-color: #999; */
+}
+
+/* sản phẩm */
+#showcart {
+    position: absolute;
+    border-radius: 10px;
+    right: 15px;
+    top: 40px;
+    padding: 10px;
+    background-color: #EEE;
+    border: 1px solid #CCC;
+    z-index: 4;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table tr td input {
+    padding: 10px;
+    width: 80%;
+    margin: 5px;
+    text-align: center;
+    /* border-radius: 5px; */
+}
+
+th {
+    background-color: #999;
+    padding: 10px;
+}
+
+th,
+td {
+    border: 1px #CCC solid;
+    text-align: center;
+}
+
+td div {
+    width: calc(100% - 20px);
+    padding: 0px 10px;
+    text-align: right;
+}
+
+th div {
+    width: calc(100% - 10px);
+    padding: 0px 5px;
+    font-size: 1.5rem;
+}
+
+td img {
+    width: 100px;
+}
+
+/* footer */
+.footer-chu {
+    border-bottom: 1px solid #fafafa;
+    padding-bottom: 3px;
+    font-weight: bold;
+}
+.hotro {
+    list-style-type: none;
+    padding: 0px;
+    margin: 0px;
+}
+
+.hotro>li>a {
+    text-decoration: none;
+    color: #aaa;
+}
+.hotro>li>a:hover{
+    color:firebrick
+}
+

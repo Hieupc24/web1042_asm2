@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ps21889_giohang</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css'>
+    <link rel="stylesheet" href="css/index.css">
+</head>
+
+<body>
+    <div class="container-fluid" style="background-color:#292929;height: 35px;">
+        <div class="container logo">
+            <i class='bx bxs-phone'>Hotline:0868.444.644</i>
+            <div class="bx_right">
+                <ul class="menu-right">
+                    <li>Cách chọn size</li>
+                    <li>Chính sách khách vip</li>
+                    <li>Giới thiệu</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid menu_sticky">
+        <div class="container ">
+            <ul class="menu">
+                <li><a href="index.html">TRANG CHỦ</a></li>
+                <li><a href="thanhtoan.html">THANH TOÁN</a></li>
+                <li><a href="slideshow.html">SLIDESHOW</a></li>
+                <li><a href="form.html">LIÊN HỆ</a></li>
+                <li><a href="#">KHUYẾN MÃI</a></li>
+                <li>
+                    <div class="giohang">
+                        <a onclick="showcart();"><i class='bx bxs-cart' style="font-size: 40px;"></i><span
+                                id="countsp">0</span></a>
+                    </div>
+                    <div id="showcart">
+                        <table>
+                            <tr>
+                                <th>STT</th>
+                                <th>Hình</th>
+                                <th>Tên sản phẩm</th>
+                                <th>Đơn giá</th>
+                                <th>Số lượng</th>
+                                <th>Thành tiền ($)</th>
+                            </tr>
+                            <tbody id="mycart">
+
+                            </tbody>
+                            <tr>
+                                <td>
+                                    <a href="thanhtoan.html">
+                                        <button type="button" class="thanhtoan btn btn-success ">Chốt đơn và thanh
+                                            toán</button>
+                                    </a>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <img src="img/banner.jpg" alt="" width="100%">
+
+    <div class="container">
+        <h3 class="row justify-content-around my-3">THỜI TRANG HOT NHẤT</h3>
+        <div class="row my-6">
+            <div class="col-md-3">
+                <div class="boxsp">
+                    <div class="img"><img src="img/a.jfif" alt=""></div>
+                    <div>$<span>285000</span></div>
+                    <a href="#">Áo Sơ Mi Màu Trắng</a>
+                    <input type="number" name="soluong" min="1" max="10" value="1" onchange="themvaogiohang(this)">
+                    <button onclick="themvaogiohang(this)" class="btn btn-success">Đặt hàng</button>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="boxsp">
+                    <div class="img"><img src="img/b.jfif" alt=""></div>
+                    <div>$<span>315000</span></div>
+                    <a href="#">Áo Sơ Mi Màu Đen</a>
+                    <input type="number" name="soluong" min="1" max="10" value="1" onchange="themvaogiohang(this)">
+                    <button onclick="themvaogiohang(this)" class="btn btn-success">Đặt hàng</button>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="boxsp">
+                    <div class="img"><img src="img/c.png" alt=""></div>
+                    <div>$<span>385000</span></div>
+                    <a href="#">Quần Tây trơn Phối Màu Đen</a>
+                    <input type="number" name="soluong" min="1" max="10" value="1" onchange="themvaogiohang(this)">
+                    <button onclick="themvaogiohang(this)" class="btn btn-success">Đặt hàng</button>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="boxsp ">
+                    <div class="img"><img src="img/d.png" alt=""></div>
+                    <div>$<span>445000</span></div>
+                    <a href="#">Quần Jeans Xanh Đen</a>
+                    <input type="number" name="soluong" min="1" max="10" value="1" onchange="themvaogiohang(this)">
+                    <button onclick="themvaogiohang(this)" class="btn btn-success">Đặt hàng</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <div class="container">
+        <h3 class="row justify-content-around my-3"></h3>
+        <div class="row">
+            <div class="col-md-3">
+                <div class="boxsp">
+                    <div class="img"><img src="img/e.png" alt=""></div>
+                    <div>$<span>345000</span></div>
+                    <a href="#">Quần short Jean From</a>
+                    <input type="number" name="soluong" min="1" max="10" value="1" onchange="themvaogiohang(this)">
+                    <button onclick="themvaogiohang(this)" class="btn btn-success">Đặt hàng</button>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="boxsp">
+                    <div class="img"><img src="img/i.jpg" alt=""></div>
+                    <div>$<span>495000</span></div>
+                    <a href="#">Giày thể thao phối đen</a>
+                    <input type="number" name="soluong" min="1" max="10" value="1" onchange="themvaogiohang(this)">
+                    <button onclick="themvaogiohang(this)" class="btn btn-success">Đặt hàng</button>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="boxsp">
+                    <div class="img"><img src="img/g.jfif" alt=""></div>
+                    <div>$<span>315000</span></div>
+                    <a href="#">Sơ mi họa tiết ASM084</a>
+                    <input type="number" name="soluong" min="1" max="10" value="1" onchange="themvaogiohang(this)">
+                    <button onclick="themvaogiohang(this)" class="btn btn-success">Đặt hàng</button>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="boxsp ">
+                    <div class="img"><img src="img/h.jpg" alt=""></div>
+                    <div>$<span>495000</span></div>
+                    <a href="#">Giày thể thao phôi G007</a>
+                    <input type="number" name="soluong" min="1" max="10" value="1" onchange="themvaogiohang(this)">
+                    <button onclick="themvaogiohang(this)" class="btn btn-success">Đặt hàng</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <div class="container">
+        <h3 class="row justify-content-around my-3">THỜI TRANG MỚI NHẤT</h3>
+        <div class="row my-6">
+            <div class="col-md-3">
+                <div class="boxsp">
+                    <div class="img"><img src="img/p.jfif" alt=""></div>
+                    <div>$<span>245000</span></div>
+                    <a href="#">Áo thun Regular In AT073</a>
+                    <input type="number" name="soluong" min="1" max="10" value="1" onchange="themvaogiohang(this)">
+                    <button onclick="themvaogiohang(this)" class="btn btn-success">Đặt hàng</button>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="boxsp">
+                    <div class="img"><img src="img/q.jfif" alt=""></div>
+                    <div>$<span>345000</span></div>
+                    <a href="#">Áo Sơ MiASM083 Màu Đen</a>
+                    <input type="number" name="soluong" min="1" max="10" value="1" onchange="themvaogiohang(this)">
+                    <button onclick="themvaogiohang(this)" class="btn btn-success">Đặt hàng</button>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="boxsp">
+                    <div class="img"><img src="img/l.jfif" alt=""></div>
+                    <div>$<span>445000</span></div>
+                    <a href="#">Áo khoác Regular AK028 Xám</a>
+                    <input type="number" name="soluong" min="1" max="10" value="1" onchange="themvaogiohang(this)">
+                    <button onclick="themvaogiohang(this)" class="btn btn-success">Đặt hàng</button>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="boxsp ">
+                    <div class="img"><img src="img/n.jfif" alt=""></div>
+                    <div>$<span>245000</span></div>
+                    <a href="#">Áo Thun Regular AT072 đỏ</a>
+                    <input type="number" name="soluong" min="1" max="10" value="1" onchange="themvaogiohang(this)">
+                    <button onclick="themvaogiohang(this)" class="btn btn-success">Đặt hàng</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <div class="container">
+        <h3 class="row justify-content-around my-3"></h3>
+        <div class="row my-6">
+            <div class="col-md-3">
+                <div class="boxsp">
+                    <div class="img"><img src="img/m.jfif" alt=""></div>
+                    <div>$<span>315000</span></div>
+                    <a href="#">Áo sơ mi Regular màu ASM086</a>
+                    <input type="number" name="soluong" min="1" max="10" value="1" onchange="themvaogiohang(this)">
+                    <button onclick="themvaogiohang(this)" class="btn btn-success">Đặt hàng</button>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="boxsp">
+                    <div class="img"><img src="img/r.jfif" alt=""></div>
+                    <div>$<span>545000</span></div>
+                    <a href="#">Áo khoác dù rã AK027 xanh dương</a>
+                    <input type="number" name="soluong" min="1" max="10" value="1" onchange="themvaogiohang(this)">
+                    <button onclick="themvaogiohang(this)" class="btn btn-success">Đặt hàng</button>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="boxsp">
+                    <div class="img"><img src="img/s.jfif" alt=""></div>
+                    <div>$<span>315000</span></div>
+                    <a href="#">Quần short Baseball QS017</a>
+                    <input type="number" name="soluong" min="1" max="10" value="1" onchange="themvaogiohang(this)">
+                    <button onclick="themvaogiohang(this)" class="btn btn-success">Đặt hàng</button>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="boxsp ">
+                    <div class="img"><img src="img/t.jfif" alt=""></div>
+                    <div>$<span>525000</span></div>
+                    <a href="#">Quần Jeans Slimfit xanh bạc</a>
+                    <input type="number" name="soluong" min="1" max="10" value="1" onchange="themvaogiohang(this)">
+                    <button onclick="themvaogiohang(this)" class="btn btn-success">Đặt hàng</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <div class="container">
+        <h3 class="row justify-content-around my-3">THỜI TRANG BÁN CHẠY</h3>
+        <div class="row my-6">
+            <div class="col-md-3">
+                <div class="boxsp">
+                    <div class="img"><img src="img/Y.jfif" alt=""></div>
+                    <div>$<span>245000</span></div>
+                    <a href="#">TL khóa tự động 082 màu đen</a>
+                    <input type="number" name="soluong" min="1" max="10" value="1" onchange="themvaogiohang(this)">
+                    <button onclick="themvaogiohang(this)" class="btn btn-success">Đặt hàng</button>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="boxsp">
+                    <div class="img"><img src="img/S.png" alt=""></div>
+                    <div>$<span>275000</span></div>
+                    <a href="#">Thắt lưng khóa tụ động</a>
+                    <input type="number" name="soluong" min="1" max="10" value="1" onchange="themvaogiohang(this)">
+                    <button onclick="themvaogiohang(this)" class="btn btn-success">Đặt hàng</button>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="boxsp">
+                    <div class="img"><img src="img/i.jfif" alt=""></div>
+                    <div>$<span>195000</span></div>
+                    <a href="#">Quần lót cao cấp</a>
+                    <input type="number" name="soluong" min="1" max="10" value="1" onchange="themvaogiohang(this)">
+                    <button onclick="themvaogiohang(this)" class="btn btn-success">Đặt hàng</button>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="boxsp ">
+                    <div class="img"><img src="img/n.jfif" alt=""></div>
+                    <div>$<span>265000</span></div>
+                    <a href="#">Áo Thun Regular AT072 đen</a>
+                    <input type="number" name="soluong" min="1" max="10" value="1" onchange="themvaogiohang(this)">
+                    <button onclick="themvaogiohang(this)" class="btn btn-success">Đặt hàng</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+    <div class="container-fluid pb-3 mt-3" style="background-color: #fafafa;">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="con pt-3">
+                        <i class='bx bxs-plane-alt ' style="font-size: 30px;"></i>
+                        <span class="pb-1"
+                            style="border-bottom: 1px solid gray; position: absolute; font-weight: bold;">THANH TOÁN & GIAO HÀNG</span>
+                    </div>
+                    <div class="nho" style="font-size: 12px;">
+                        <span>Miễn phí vận chuyển cho đơn hàng trên 499.000 VNĐ</span> <br>
+                        <span>- Giao hàng và thu tiền tận nơi</span> <br>
+                        <span>- Chuyển khoản và giao hàng</span> <br>
+                        <span>- Mua hàng tại shop </span> <br>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="con pt-3">
+                        <i class='bx bx-credit-card' style="font-size: 30px;"></i>
+                        <span class="pb-1"
+                            style="border-bottom: 1px solid gray; position: absolute; font-weight: bold;">THẺ THÀNH VIÊN</span>
+                    </div>
+                    <div class="nho" style="font-size: 12px;">
+                        <span>Chế độ ưu đãi thành viên vn</span> <br>
+                        <span>- 5% cho thành viên bạc</span> <br>
+                        <span>- 10% cho thành viên vàng</span> <br>
+                        <span>- 15% cho thành viên kim cương</span> <br>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="con pt-3">
+                        <i class='bx bx-time-five' style="font-size: 30px;"></i>
+                        <span class="pb-1"
+                            style="border-bottom: 1px solid gray; position: absolute; font-weight: bold;">GIỜ MỞ CỬA</span>
+                    </div>
+                    <div class="nho" style="font-size: 12px;">
+                        <span style="font-weight: bold;">8:30 đến 22:00</span> <br>
+                        <span>- Tất cả các ngày trong tuần</span> <br>
+                        <span>- Áp dụng cho tất cả các chi nhánh hệ thống của hàng</span> <br>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="con pt-3">
+                        <i class='bx bx-headphone' style="font-size: 30px;"></i>
+                        <span class="pb-1"
+                            style="border-bottom: 1px solid gray; position: absolute; font-weight: bold;">HỖ TRỢ
+                            24/7</span>
+                    </div>
+                    <div class="nho" style="font-size: 12px;">
+                        <span>Gọi ngay cho chúng tôi khi bạn có thắc mắc</span> <br>
+                        <span>- 0868.444.644</span> <br>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid" style="background-color: #1e1e1e; height: 320px;">
+        <div class="container" style="color:#fafafa">
+            <div class="row ">
+                <div class="col-md-4 py-3">
+                    <span class="footer-chu">HỖ TRỢ KHÁCH HÀNG</span>
+                    <ul class="hotro pt-3">
+                        <li><a href="#">-Hướng dẫn đặt hàng</a></li>
+                        <li><a href="#">-Hướng dẫn chọn size</a></li>
+                        <li><a href="#">-Câu hỏi thường gặpf</a></li>
+                        <li><a href="#">-Chính sách khách VIP</a></li>
+                        <li><a href="#">-Thanh toán-giao hàng</a></li>
+                        <li><a href="#">-Chính sách đổi hàng</a></li>
+                        <li><a href="#">-Chính sách bảo mật</a></li>
+                        <li><a href="#">-Chính sách cookie</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 py-3">
+                    <p class="footer-chu" style="display: inline-block;">ĐỊA CHỈ-HOTLINE</p> <br>
+                    <div style="font-size: 15px;">
+                        <span>Trụ sở chính:</span> <br>
+                        <span>-MST cá nhân: 0312028096</span> <br>
+                        <span>-Số ĐKKD: 41G8031109 do UBND Quận 7 - Tp.HCM</span>
+                    </div>
+                </div>
+                <div class="col-md-4 py-3">
+                    <p class="footer-chu" style="display: inline-block;">HỆ THỐNG CỦA HÀNG</p> <br>
+                    <img src="img/banner1.jpg" alt="" style="width: 300px;" class="bt-3"> <br>
+                    <span>Địa chỉ: Tầng 2, 252 Lý Tự Trọng, p. Bến Thành, quận 1</span> <br>
+                    <span>Giờ mở cửa: 08:00 đến 22:00</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/cart.js"></script>
+    <script>
+        document.getElementById('showcart').style.display = 'none';
+    </script>
+</body>
+
+</html>

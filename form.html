@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ps21889_form</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css'>
+    <link rel="stylesheet" href="css/index.css">
+    <style>
+        label {
+            font-weight: 600;
+        }
+    </style>
+</head>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+
+<body>
+    <div class="container-fluid" style="background-color:#292929;height: 35px;">
+        <div class="container logo">
+            <i class='bx bxs-phone'>Hotline:0868.444.644</i>
+            <div class="bx_right">
+                <ul class="menu-right">
+                    <li>Cách chọn size</li>
+                    <li>Chính sách khách vip</li>
+                    <li>Giới thiệu</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid menu_sticky">
+        <div class="container ">
+            <ul class="menu">
+                <li><a href="index.html">TRANG CHỦ</a></li>
+                <li><a href="thanhtoan.html">THANH TOÁN</a></li>
+                <li><a href="slideshow.html">SLIDESHOW</a></li>
+                <li><a href="form.html">LIÊN HỆ</a></li>
+                <li><a href="#">KHUYẾN MÃI</a></li>
+                <li>
+                    <div class="giohang">
+                        <a onclick="showcart();"><i class='bx bxs-cart' style="font-size: 40px;"></i><span
+                                id="countsp">0</span></a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div id="wrapper">
+        <div class="container">
+            <div class="row justify-content-around ">
+                <form class="col-md-6 bg-light px-5  my-3 border " name="frm" ng-app="myApp" ng-controller="myCtrl">
+                    <h3 class="text-center text-uppercase py-4 text-success">Đăng ký thành viên</h3>
+                    <div class="form-group my-3">
+                        <label for="masv">Mã sinh viên</label>
+                        <input type="text" name="masv" id="masv" ng-model="masv" class="form-control text-primary"
+                            minlength="5" maxlength="10" required>
+                        <span ng-if="!masv" class="text-danger"><i>Mã sinh viên không để trống</i></span>
+                    </div>
+                    <div class="form-group my-3">
+                        <label for="tensv">Tên sinh viên</label>
+                        <input type="text" name="tensv" id="tensv" ng-model="tensv" class="form-control  text-primary"
+                            minlength="2" maxlength="10" required>
+                        <p ng-if="!tensv"><i class="text-danger">Tên sv không được bỏ trống</i></p>
+                    </div>
+                    <div class="form-group my-3">
+                        <label>Giới tính</label>
+                        <div class="form-control">
+                            <input type="radio" name="gt" id="gt" ng-model="gt" value="0">Nam
+                            <input type="radio" name="gt" id="gt" ng-model="gt" value="1">Nữ
+                        </div>
+                        <p ng-if="!gt" class="text-danger"><i>Chọn giới tính</i></p>
+                    </div>
+                    <div class="form-group my-3">
+                        <label>Sở thích</label>
+                        <div class="form-control" id="sthich">
+                            <input type="checkbox" ng-model="ds" value="ds">Đọc sách
+                            <input type="checkbox" ng-model="dl" value="dl">Du lịch
+                            <input type="checkbox" ng-model="at" value="at">Ẩm thực
+                            <input type="checkbox" ng-model="an" value="an">Âm nhạc
+                            <input type="checkbox" ng-model="k" value="k" id="k" onclick="khac()">Khác
+                        </div>
+                        <p ng-if="!ds && !dl && !at && !an && !k" class="text-danger"><i>Chọn 1 sở thích</i></p>
+                        <div class="form-control" style="display: none;" id="khac">
+                            <input type="checkbox" value="db">Đá banh
+                            <input type="checkbox" value="bc">Bóng chuyền
+                            <input type="checkbox" value="sp">Shopping
+                        </div>
+                    </div>
+                    <div class="form-group my-3">
+                        <label>Quốc tịch</label>
+                        <select name="quoctich" class="form-control" ng-model="quoctich">
+                            <option value="" selected disabled hidden>Chọn quốc tịch</option>
+                            <option value="1">Việt Nam</option>
+                            <option value="2">China</option>
+                            <option value="3">Kroean</option>
+                            <option value="4">Japan</option>
+                            <option value="5">England</option>
+                        </select>
+                        <p ng-if="!quoctich" class="text-danger"><i>Chọn quốc tịch</i></p>
+                    </div>
+                    <div class="form-group my-3">
+                        <label for="ghichu">Ghi chú</label>
+                        <textarea name="ghichu" id="ghichu" ng-model="ghichu" cols="15" rows="5"
+                            class="form-control text-primary" minlength="5" maxlength="15"></textarea>
+                        <p ng-if="!ghichu" class="text-danger"><i>Nhập ghi chú</i></p>
+                    </div>
+                    <input type="submit" class="btn-primary btn btn-block my-2 " style="margin:0 45%" value="Đăng ký">
+                </form>
+            </div>
+        </div>
+    </div>
+    <br>
+    <div class="container-fluid pb-3 mt-3" style="background-color: #fafafa;">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="con pt-3">
+                        <i class='bx bxs-plane-alt ' style="font-size: 30px;"></i>
+                        <span class="pb-1"
+                            style="border-bottom: 1px solid gray; position: absolute; font-weight: bold;">THANH TOÁN &
+                            GIAO HÀNG</span>
+                    </div>
+                    <div class="nho" style="font-size: 12px;">
+                        <span>Miễn phí vận chuyển cho đơn hàng trên 499.000 VNĐ</span> <br>
+                        <span>- Giao hàng và thu tiền tận nơi</span> <br>
+                        <span>- Chuyển khoản và giao hàng</span> <br>
+                        <span>- Mua hàng tại shop </span> <br>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="con pt-3">
+                        <i class='bx bx-credit-card' style="font-size: 30px;"></i>
+                        <span class="pb-1"
+                            style="border-bottom: 1px solid gray; position: absolute; font-weight: bold;">THẺ THÀNH
+                            VIÊN</span>
+                    </div>
+                    <div class="nho" style="font-size: 12px;">
+                        <span>Chế độ ưu đãi thành viên vn</span> <br>
+                        <span>- 5% cho thành viên bạc</span> <br>
+                        <span>- 10% cho thành viên vàng</span> <br>
+                        <span>- 15% cho thành viên kim cương</span> <br>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="con pt-3">
+                        <i class='bx bx-time-five' style="font-size: 30px;"></i>
+                        <span class="pb-1"
+                            style="border-bottom: 1px solid gray; position: absolute; font-weight: bold;">GIỜ MỞ
+                            CỬA</span>
+                    </div>
+                    <div class="nho" style="font-size: 12px;">
+                        <span style="font-weight: bold;">8:30 đến 22:00</span> <br>
+                        <span>- Tất cả các ngày trong tuần</span> <br>
+                        <span>- Áp dụng cho tất cả các chi nhánh hệ thống của hàng</span> <br>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="con pt-3">
+                        <i class='bx bx-headphone' style="font-size: 30px;"></i>
+                        <span class="pb-1"
+                            style="border-bottom: 1px solid gray; position: absolute; font-weight: bold;">HỖ TRỢ
+                            24/7</span>
+                    </div>
+                    <div class="nho" style="font-size: 12px;">
+                        <span>Gọi ngay cho chúng tôi khi bạn có thắc mắc</span> <br>
+                        <span>- 0868.444.644</span> <br>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid" style="background-color: #1e1e1e; height: 320px;">
+        <div class="container" style="color:#fafafa">
+            <div class="row ">
+                <div class="col-md-4 py-3">
+                    <span class="footer-chu">HỖ TRỢ KHÁCH HÀNG</span>
+                    <ul class="hotro pt-3">
+                        <li><a href="#">-Hướng dẫn đặt hàng</a></li>
+                        <li><a href="#">-Hướng dẫn chọn size</a></li>
+                        <li><a href="#">-Câu hỏi thường gặpf</a></li>
+                        <li><a href="#">-Chính sách khách VIP</a></li>
+                        <li><a href="#">-Thanh toán-giao hàng</a></li>
+                        <li><a href="#">-Chính sách đổi hàng</a></li>
+                        <li><a href="#">-Chính sách bảo mật</a></li>
+                        <li><a href="#">-Chính sách cookie</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 py-3">
+                    <p class="footer-chu" style="display: inline-block;">ĐỊA CHỈ-HOTLINE</p> <br>
+                    <div style="font-size: 15px;">
+                        <span>Trụ sở chính:</span> <br>
+                        <span>-MST cá nhân: 0312028096</span> <br>
+                        <span>-Số ĐKKD: 41G8031109 do UBND Quận 7 - Tp.HCM</span>
+                    </div>
+                </div>
+                <div class="col-md-4 py-3">
+                    <p class="footer-chu" style="display: inline-block;">HỆ THỐNG CỦA HÀNG</p> <br>
+                    <img src="img/banner1.jpg" alt="" style="width: 300px;" class="bt-3"> <br>
+                    <span>Địa chỉ: Tầng 2, 252 Lý Tự Trọng, p. Bến Thành, quận 1</span> <br>
+                    <span>Giờ mở cửa: 08:00 đến 22:00</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
+<script>
+    var app = angular.module("myApp", []);
+    app.controller("myCtrl", xuly);
+    function xuly($scope) {
+
+    }
+</script>
+<script>
+    function khac() {
+        var khac = document.getElementById("k").value;
+        if (khac == 'k') {
+            document.getElementById("sthich").style.display = 'none';
+            document.getElementById("khac").style.display = 'block';
+        } else {
+            document.getElementById("khac").style.display = 'none';
+        }
+    }
+</script>
